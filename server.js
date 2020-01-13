@@ -55,5 +55,6 @@ function upload_random_image(images){
   }
 
 
-upload_random_image(images);
-  
+setInterval(function(){
+    upload_random_image(images);
+  }, 1800000);
