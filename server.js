@@ -10,10 +10,14 @@ function random_from_array(images){
     return images[Math.floor(Math.random() * images.length)];
 }
 
+function random_num(){
+    return (Math.floor(Math.random() * 419))+1;
+}
+
 function upload_random_image(images){
     console.log('Opening an image...');
     var random_image = random_from_array(images),
-        image_path = path.join(__dirname, '/images/' + random_image.file ),
+        image_path = path.join(__dirname, '/images/' + 'image (' + random_num() +').jpg'),
         b64content = fs.readFileSync(image_path, { encoding: 'base64' });
   
     console.log('Uploading an image...');
@@ -57,4 +61,4 @@ function upload_random_image(images){
 upload_random_image(images);
 setInterval(function(){
     upload_random_image(images);
-  }, 1799900);
+  }, 1200000);
