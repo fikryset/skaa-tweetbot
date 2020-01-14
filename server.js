@@ -11,7 +11,7 @@ function random_from_array(images){
 }
 
 function random_num(){
-    return (Math.floor(Math.random() * 419))+1;
+    return (Math.floor(Math.random() * 200))+1;
 }
 
 function upload_random_image(images){
